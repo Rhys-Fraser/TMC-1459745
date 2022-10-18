@@ -19,6 +19,10 @@ class Program
         TruncateTest();
         GetLengthOfString("Rhys Fraser");
         GetCharOfString("Rhys Fraser", 5);
+        ExtractSubString();
+        ConcatenatingTwoStrings();
+        ConversionPointNumber();
+        CoversionInteger();
     }
 
     public static void RangeTest()
@@ -73,5 +77,44 @@ class Program
 
         singleLetter = str[i];
         Console.WriteLine("Character {0} of {1} is {2}", i, str, singleLetter);
+    }
+
+    public static void ExtractSubString()
+    {
+        string month = "January";
+        string subString;
+        int startPos = 3;
+        int howMany = 2;
+
+        subString = month.Substring(startPos, howMany);
+        Console.WriteLine("Substring is {0}", subString);
+    }
+
+    public static void ConcatenatingTwoStrings()
+    {
+        string month = "January";
+        string saying = " has 31 days.";
+        string combined;
+
+        combined = month + saying;
+        Console.WriteLine("Joined string is {0}", combined);
+    }
+
+    public static void ConversionPointNumber()
+    {
+        string mystring = "123.45";
+        float mynumber = 0;
+
+        mynumber = float.Parse(mystring);
+        Console.WriteLine("My number, 100 times bigger is {0}", mynumber * 100);
+    }
+
+    public static void CoversionInteger()
+    {
+        string mystring = "123";
+        int mynumber = 0;
+
+        mynumber = int.Parse(mystring);
+        Console.WriteLine("My number, subtract 1 is {0}", mynumber - 1);
     }
 }
