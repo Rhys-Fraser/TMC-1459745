@@ -18,6 +18,7 @@ class Program
         RoundTest();
         TruncateTest();
         GetLengthOfString("Rhys Fraser");
+        GetCharOfString("Rhys Fraser", 5);
     }
 
     public static void RangeTest()
@@ -64,5 +65,13 @@ class Program
 
         length = str.Length;
         Console.WriteLine("{0} is {1} characters long", str, length);
+    }
+
+    public static void GetCharOfString(string str, int i)
+    {
+        char singleLetter;
+
+        singleLetter = str[i];
+        Console.WriteLine("Character {0} of {1} is {2}", i, str, singleLetter);
     }
 }
