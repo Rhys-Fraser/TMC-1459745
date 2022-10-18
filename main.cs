@@ -17,6 +17,7 @@ class Program
         RangeTest();
         RoundTest();
         TruncateTest();
+        GetLengthOfString("Rhys Fraser");
     }
 
     public static void RangeTest()
@@ -55,5 +56,13 @@ class Program
         decimalNumber = -32.9012m;
 
         Console.WriteLine(Math.Truncate(decimalNumber));
+    }
+
+    public static void GetLengthOfString(string str)
+    {
+        int length;
+
+        length = str.Length;
+        Console.WriteLine("{0} is {1} characters long", str, length);
     }
 }
